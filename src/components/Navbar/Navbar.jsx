@@ -7,14 +7,15 @@ import {
   FundOutlined,
 } from "@ant-design/icons";
 import { Link } from "react-router-dom";
-import icon from "../assets/images/cryptocurrency.png";
+import icon from "assets/images/cryptocurrency.png";
+import styles from "./navbar.module.css";
 
 const Navbar = () => {
   return (
-    <div className="nav">
-      <div className="logoContainer">
+    <div className={styles.nav}>
+      <div className={styles.logoContainer}>
         <Avatar src={icon} size="large" />
-        <Typography.Title level={2} className="logo">
+        <Typography.Title level={2} className={styles.logo}>
           <Link to="/">Cryptoverse</Link>
         </Typography.Title>
         <Menu theme="dark">
