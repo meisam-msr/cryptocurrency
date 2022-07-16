@@ -2,7 +2,7 @@ import "App.css";
 import { Layout, Space, Typography } from "antd";
 import { Link, Route, Routes } from "react-router-dom";
 import Navbar from "components/Navbar/Navbar";
-import HomePage from "components/HomePage";
+import HomePage from "components/HomePage/HomePage";
 import Exchanges from "components/Exchanges";
 import Cryptocurrencies from "components/Cryptocurrencies";
 import CryptoDetails from "components/CryptoDetails";
