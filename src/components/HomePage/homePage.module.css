@@ -3,3 +3,17 @@
     margin-top: 20px;
   }
 }
+.homeHeadingContainer {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 40px;
+}
+.showMore {
+  margin-top: 0px !important;
+}
+@media screen and (max-width: 800px) {
+  .homeTitle {
+    font-size: 1.4rem !important;
+  }
+}
