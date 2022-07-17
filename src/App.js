@@ -4,7 +4,7 @@ import { Link, Route, Routes } from "react-router-dom";
 import Navbar from "components/Navbar/Navbar";
 import HomePage from "components/HomePage/HomePage";
 import Exchanges from "components/Exchanges";
-import Cryptocurrencies from "components/Cryptocurrencies";
+import Cryptocurrencies from "components/Cryptocurrencies/Cryptocurrencies";
 import CryptoDetails from "components/CryptoDetails";
 import News from "components/News";
 

@@ -1,0 +1,9 @@
+.cryptoCardContainer{
+    min-height: 65vh !important;
+}
+.cryptoCard{
+    min-width: 250px;
+}
+.cryptoCard .cryptoImg{
+    width:35px;
+}
