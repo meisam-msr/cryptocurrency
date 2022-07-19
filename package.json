@@ -10,6 +10,7 @@
     "@testing-library/user-event": "^13.5.0",
     "antd": "^4.16.0",
     "dotenv": "^16.0.1",
+    "html-react-parser": "^3.0.1",
     "millify": "^4.0.0",
     "moment": "^2.29.4",
     "react": "^18.2.0",
