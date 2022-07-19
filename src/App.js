@@ -6,7 +6,7 @@ import HomePage from "components/HomePage/HomePage";
 import Exchanges from "components/Exchanges";
 import Cryptocurrencies from "components/Cryptocurrencies/Cryptocurrencies";
 import CryptoDetails from "components/CryptoDetails";
-import News from "components/News";
+import News from "components/News/News";
 
 function App() {
   return (

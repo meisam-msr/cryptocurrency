@@ -5,7 +5,7 @@ import { useGetCryptosQuery } from "services/cryptoApi";
 import { longNumToStr } from "utils/longNumToStr";
 import { Link } from "react-router-dom";
 import Cryptocurrencies from "components/Cryptocurrencies/Cryptocurrencies";
-import News from "components/News";
+import News from "components/News/News";
 const { Title } = Typography;
 
 const HomePage = () => {
