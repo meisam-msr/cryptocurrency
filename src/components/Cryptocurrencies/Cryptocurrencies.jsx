@@ -1,8 +1,8 @@
 import { Card, Col, Input, Row } from "antd";
+import millify from "millify";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
 import { useGetCryptosQuery } from "services/cryptoApi";
-import { longNumToStr } from "utils/longNumToStr";
 import styles from "./cryptocurrencies.module.css";
 
 const Cryptocurrencies = ({ simplified }) => {
@@ -37,9 +37,9 @@ const Cryptocurrencies = ({ simplified }) => {
             sm={12}
             lg={6}
             className={styles.cryptoCard}
-            key={currency.id}
+            key={currency.uuid}
           >
-            <Link to={`/crypto/${currency.id}`}>
+            <Link to={`/crypto/${currency.uuid}`}>
               <Card
                 title={`${currency.rank} ${currency.name}`}
                 extra={
@@ -47,9 +47,9 @@ const Cryptocurrencies = ({ simplified }) => {
                 }
                 hoverable
               >
-                <p>Price: {longNumToStr(currency.price)}</p>
-                <p>MArket Cap: {longNumToStr(currency.marketCap)}</p>
-                <p>Daily Change: {longNumToStr(currency.change)}</p>
+                <p>Price: {millify(currency.price)}</p>
+                <p>Market Cap: {millify(currency.marketCap)}</p>
+                <p>Daily Change: {millify(currency.change)}</p>
               </Card>
             </Link>
           </Col>

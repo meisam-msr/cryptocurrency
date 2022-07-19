@@ -2,10 +2,10 @@ import { Col, Row, Statistic, Typography } from "antd";
 import React from "react";
 import styles from "./homePage.module.css";
 import { useGetCryptosQuery } from "services/cryptoApi";
-import { longNumToStr } from "utils/longNumToStr";
 import { Link } from "react-router-dom";
 import Cryptocurrencies from "components/Cryptocurrencies/Cryptocurrencies";
 import News from "components/News/News";
+import millify from "millify"
 const { Title } = Typography;
 
 const HomePage = () => {
@@ -23,31 +23,31 @@ const HomePage = () => {
         <Col span={12}>
           <Statistic
             title="Total Cryptocurrencies"
-            value={longNumToStr(globalStats.total)}
+            value={millify(globalStats.total)}
           />
         </Col>
         <Col span={12}>
           <Statistic
             title="Total Exchanges"
-            value={longNumToStr(globalStats.totalExchanges)}
+            value={millify(globalStats.totalExchanges)}
           />
         </Col>
         <Col span={12}>
           <Statistic
             title="Total Market Cap"
-            value={longNumToStr(globalStats.totalMarketCap)}
+            value={millify(globalStats.totalMarketCap)}
           />
         </Col>
         <Col span={12}>
           <Statistic
             title="Total 24h Volume"
-            value={longNumToStr(globalStats.total24hVolume)}
+            value={millify(globalStats.total24hVolume)}
           />
         </Col>
         <Col span={12}>
           <Statistic
             title="Total Market"
-            value={longNumToStr(globalStats.totalMarkets)}
+            value={millify(globalStats.totalMarkets)}
           />
         </Col>
       </Row>
