@@ -1,6 +1,7 @@
 import { Avatar, Card, Col, Row, Select } from "antd";
 import Text from "antd/lib/typography/Text";
 import Title from "antd/lib/typography/Title";
+import Loader from "components/Loader/Laoder";
 import moment from "moment";
 import React, { useState } from "react";
 import { useGetCryptosQuery } from "services/cryptoApi";
@@ -19,7 +20,7 @@ const News = ({ simplified }) => {
   });
   const { data } = useGetCryptosQuery(100);
 
-  if (!cryptoNews?.value) return "Loading...";
+  if (!cryptoNews?.value) return <Loader />;
   return (
     <Row gutter={[24, 24]}>
       {!simplified && (
@@ -44,7 +45,7 @@ const News = ({ simplified }) => {
       {cryptoNews.value.map((news, i) => (
         <Col xs={24} sm={12} lg={8} key={i}>
           <Card hoverable className={styles.newsCard}>
-            <a href={news.url} target="_blank" rel="noreffer">
+            <a href={news.url} target="_blank" rel="noreferrer">
               <div className={styles.newsImgContainer}>
                 <Title className={styles.newsTitle} level={4}>
                   {news.name}

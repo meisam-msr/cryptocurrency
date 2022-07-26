@@ -22,6 +22,7 @@ import Title from "antd/lib/typography/Title";
 import Text from "antd/lib/typography/Text";
 import HTMLReactParser from "html-react-parser";
 import LineChart from "components/LineChart/LineChart";
+import Loader from "components/Loader/Laoder";
 const { Option } = Select;
 
 const CryptoDetails = () => {
@@ -34,7 +35,7 @@ const CryptoDetails = () => {
   });
   const cryptoDetails = data?.data?.coin;
 
-  if (isFetching) return "Loading...";
+  if (isFetching) return <Loader/>;
 
   const time = ["3h", "24h", "7d", "30d", "3m", "1y", "3y", "5y"];
 

@@ -5,14 +5,15 @@ import { useGetCryptosQuery } from "services/cryptoApi";
 import { Link } from "react-router-dom";
 import Cryptocurrencies from "components/Cryptocurrencies/Cryptocurrencies";
 import News from "components/News/News";
-import millify from "millify"
+import millify from "millify";
+import Loader from "components/Loader/Laoder";
 const { Title } = Typography;
 
 const HomePage = () => {
   const { data, isFetching } = useGetCryptosQuery(10);
   const globalStats = data?.data?.stats;
 
-  if (isFetching) return "Loading...";
+  if (isFetching) return <Loader />;
 
   return (
     <>

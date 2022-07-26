@@ -1,4 +1,5 @@
 import { Card, Col, Input, Row } from "antd";
+import Loader from "components/Loader/Laoder";
 import millify from "millify";
 import { useEffect, useState } from "react";
 import { Link } from "react-router-dom";
@@ -18,7 +19,7 @@ const Cryptocurrencies = ({ simplified }) => {
     setCryptos(filteredData);
   }, [cryptosList, searchTerm]);
 
-  if (isFetching) return "Loading...";
+  if (isFetching) return <Loader />;
 
   return (
     <>
@@ -43,7 +44,7 @@ const Cryptocurrencies = ({ simplified }) => {
               <Card
                 title={`${currency.rank} ${currency.name}`}
                 extra={
-                  <img className={styles.cryptoImg} src={currency.iconUrl} />
+                  <img className={styles.cryptoImg} src={currency.iconUrl} alt=""/>
                 }
                 hoverable
               >
